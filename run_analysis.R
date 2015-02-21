@@ -156,7 +156,8 @@ run_analysis <- function(){
   
   #If I want long format (not used)
   #final_output_long <- melt(out, id.vars=c("subject","activity")) %>% arrange(subject,activity)
-
+  
+  final_output
 }
 
 
