@@ -11,9 +11,10 @@
 * run 
  ``` run_analysis()```
 * tidy data set is generated in "final_output.txt" of working directory (also added in github directory)
-* to View table in R:
+* to View table in Rstudio:
   ```
-   View(read.table("final_output.txt",header=TRUE))
+   tidy_set <- read.table("final_output.txt",header=TRUE))
+   View(tidy_set)
   ```
 
 
