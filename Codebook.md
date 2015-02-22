@@ -13,6 +13,7 @@ The current study does the following
 4. Appropriatly label the column name: removing special characters, enhancing readability, and removing anomalies 
 5. creates a second, independent tidy dataset with the average of each variable for each activity and each subject. This is the final output of the study. The variables of the final output are detailed in the codebook section.
 
+All transformation are done using the script run_alaysis.R in the submited repo. See Readme.md for instructions on reproduccing the data set. 
   
 ##Codebook
 
