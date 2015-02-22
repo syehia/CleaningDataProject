@@ -8,85 +8,85 @@ The original data set contains two separate data set, train and test. Please ref
 The current study does the following
 
 1. Merges the training and the test sets to create one data set. The data set also aggregates subject ID (in ```subject_(train|test).txt)``` and activity ID (in ```y_(train|test).txt)``` with the main data (```X_(train|test).txt```) in one table
-2. Extracts only the measurements on the mean and standard deviation for each measurement. specifically, we characterized those as the features in the original data which names containes either ```mean()``` or ```std()```, that results in 66 features extracted from the original data set.
-3. replace activity number by thir descriptive activity names (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING)
+2. Extracts only the measurements on the mean and standard deviation for each measurement. specifically, we characterized those as the features in the original data which names contain either ```mean()``` or ```std()```, that results in 66 features extracted from the original data set (in addition to the subject ID and Activity).
+3. replace activity number by their descriptive activity names (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING)
 4. Appropriatly label the column name: removing special characters, enhancing readability, and removing anomalies 
-5. creates a second, independent tidy dataset with the average of each variable for each activity and each subject. This is the final output of the study. The variable sof the final output is detailed in the codebook section.
+5. creates a second, independent tidy dataset with the average of each variable for each activity and each subject. This is the final output of the study. The variables of the final output are detailed in the codebook section.
 
   
 ##Codebook
 
-```
-n Variable name
-1 subject
-2 activity
-3 tBodyAcc.mean.X
-4 tBodyAcc.mean.Y
-5 tBodyAcc.mean.Z
-6 tBodyAcc.std.X
-7 tBodyAcc.std.Y
-8 tBodyAcc.std.Z
-9 tGravityAcc.mean.X
-10 tGravityAcc.mean.Y
-11 tGravityAcc.mean.Z
-12 tGravityAcc.std.X
-13 tGravityAcc.std.Y
-14 tGravityAcc.std.Z
-15 tBodyAccJerk.mean.X
-16 tBodyAccJerk.mean.Y
-17 tBodyAccJerk.mean.Z
-18 tBodyAccJerk.std.X
-19 tBodyAccJerk.std.Y
-20 tBodyAccJerk.std.Z
-21 tBodyGyro.mean.X
-22 tBodyGyro.mean.Y
-23 tBodyGyro.mean.Z
-24 tBodyGyro.std.X
-25 tBodyGyro.std.Y
-26 tBodyGyro.std.Z
-27 tBodyGyroJerk.mean.X
-28 tBodyGyroJerk.mean.Y
-29 tBodyGyroJerk.mean.Z
-30 tBodyGyroJerk.std.X
-31 tBodyGyroJerk.std.Y
-32 tBodyGyroJerk.std.Z
-33 tBodyAccMag.mean
-34 tBodyAccMag.std
-35 tGravityAccMag.mean
-36 tGravityAccMag.std
-37 tBodyAccJerkMag.mean
-38 tBodyAccJerkMag.std
-39 tBodyGyroMag.mean
-40 tBodyGyroMag.std
-41 tBodyGyroJerkMag.mean
-42 tBodyGyroJerkMag.std
-43 fBodyAcc.mean.X
-44 fBodyAcc.mean.Y
-45 fBodyAcc.mean.Z
-46 fBodyAcc.std.X
-47 fBodyAcc.std.Y
-48 fBodyAcc.std.Z
-49 fBodyAccJerk.mean.X
-50 fBodyAccJerk.mean.Y
-51 fBodyAccJerk.mean.Z
-52 fBodyAccJerk.std.X
-53 fBodyAccJerk.std.Y
-54 fBodyAccJerk.std.Z
-55 fBodyGyro.mean.X
-56 fBodyGyro.mean.Y
-57 fBodyGyro.mean.Z
-58 fBodyGyro.std.X
-59 fBodyGyro.std.Y
-60 fBodyGyro.std.Z
-61 fBodyAccMag.mean
-62 fBodyAccMag.std
-63 fBodyAccJerkMag.mean
-64 fBodyAccJerkMag.std
-65 fBodyGyroMag.mean
-66 fBodyGyroMag.std
-67 fBodyGyroJerkMag.mean
-68 fBodyGyroJerkMag.std
-```
+| Column Number | Variable Name      | Description/details      |
+|---            |---                 | ---                      |
+| 1             |subject             | Subject identifier, range from 1 to 30  |
+| 2             |activity            | Activity Name, takes one of 6 values: (ALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) |
+| 3             | tBodyAcc.mean.X     | Triaxial body acceleration (X axis - time domain), mean of estimated mean of measurements for this subject/activity pair. Original unit is acceleration unit g, normalized and bounded within [-1,1] |
+| 4             | tBodyAcc.mean.Y     | Triaxial body acceleration (Y axis- time domain), mean of estimated mean of measurements for this subject/activity pair. Original unit is acceleration unit g, normalized and bounded within [-1,1] |
+| 5             | tBodyAcc.mean.Z     | Triaxial body acceleration (Z axis- time domain), mean of estimated mean of measurements for this subject/activity pair. Original unit is acceleration unit g, normalized and bounded within [-1,1] |
+| 6             | tBodyAcc.std.X     | Triaxial body acceleration (X axis- time domain), mean of estimated standard deviation of measurements for this subject/activity pair. Original unit is acceleration unit g, normalized and bounded within [-1,1] |
+| 7             | tBodyAcc.std.Y     | Triaxial body acceleration (Y axis- time domain), mean of estimated  standard deviation of measurements for this subject/activity pair. Original unit is acceleration unit g, normalized and bounded within [-1,1] |
+| 8             | tBodyAcc.std.Z     | Triaxial body acceleration (Z axis- time domain), mean of estimated standard deviation of measurements for this subject/activity pair. Original unit is acceleration unit g, normalized and bounded within [-1,1] |
+| 9             | tGravityAcc.mean.X     | Triaxial Gravity acceleration (X axis - time domain), mean of estimated mean of measurements for this subject/activity pair. Original unit is acceleration unit g, normalized and bounded within [-1,1] |
+| 10             | tGravityAcc.mean.Y     | Triaxial Gravity acceleration (Y axis- time domain), mean of estimated mean of measurements for this subject/activity pair. Original unit is acceleration unit g, normalized and bounded within [-1,1] |
+| 11             | tGravityAcc.mean.Z     | Triaxial Gravity acceleration (Z axis- time domain), mean of estimated mean of measurements for this subject/activity pair. Original unit is acceleration unit g, normalized and bounded within [-1,1] |
+| 12             | tGravityAcc.std.X     | Triaxial Gravity acceleration (X axis- time domain), mean of estimated standard deviation of measurements for this subject/activity pair. Original unit is acceleration unit g, normalized and bounded within [-1,1] |
+| 13             | tGravityAcc.std.Y     | Triaxial Gravity acceleration (Y axis- time domain), mean of estimated  standard deviation of measurements for this subject/activity pair. Original unit is acceleration unit g, normalized and bounded within [-1,1] |
+| 14             | tGravityAcc.std.Z     | Triaxial Gravity acceleration (Z axis- time domain), mean of estimated standard deviation of measurements for this subject/activity pair. Original unit is acceleration unit g, normalized and bounded within [-1,1] |
+| 15            | tBodyAccJerk.mean.X     | Triaxial Body Acceleration Jerk signal (X axis - time domain), mean of estimated mean of measurements for this subject/activity pair. Original unit is acceleration unit g/s, normalized and bounded within [-1,1] |
+| 16            | tBodyAccJerk.mean.Y     | Triaxial Body Acceleration Jerk signal (Y axis- time domain), mean of estimated mean of measurements for this subject/activity pair. Original unit is acceleration unit g/s, normalized and bounded within [-1,1] |
+| 17             | tBodyAccJerk.mean.Z     | Triaxial Body Acceleration Jerk signal (Z axis- time domain), mean of estimated mean of measurements for this subject/activity pair. Original unit is acceleration unit g/s, normalized and bounded within [-1,1] |
+| 18             | tBodyAccJerk.std.X     | Triaxial Body Acceleration Jerk signal (X axis- time domain), mean of estimated standard deviation of measurements for this subject/activity pair. Original unit is acceleration unit g/s, normalized and bounded within [-1,1] |
+| 19             | tBodyAccJerk.std.Y     | Triaxial Body Acceleration Jerk signal (Y axis- time domain), mean of estimated  standard deviation of measurements for this subject/activity pair. Original unit is acceleration unit g/s, normalized and bounded within [-1,1] |
+| 20             | tBodyAccJerk.std.Z     | Triaxial Body Acceleration Jerk signal (Z axis- time domain), mean of estimated standard deviation of measurements for this subject/activity pair. Original unit is acceleration unit g/s, normalized and bounded within [-1,1] |
+| 21            | tBodyGyro.mean.X     | Angular Velocity (X axis - time domain), mean of estimated mean of measurements for this subject/activity pair. Original unit is acceleration unit radian/s, normalized and bounded within [-1,1] |
+| 22            | tBodyGyro.mean.Y     | Angular Velocity (Y axis- time domain), mean of estimated mean of measurements for this subject/activity pair. Original unit is acceleration unit radians/s, normalized and bounded within [-1,1] |
+| 23             | tBodyGyro.mean.Z     | Angular Velocity (Z axis- time domain), mean of estimated mean of measurements for this subject/activity pair. Original unit is acceleration unit radians/s, normalized and bounded within [-1,1] |
+| 24             | tBodyGyro.std.X     | Angular Velocity (X axis- time domain), mean of estimated standard deviation of measurements for this subject/activity pair. Original unit is acceleration unit radians/s, normalized and bounded within [-1,1] |
+| 25             | tBodyGyro.std.Y     | Angular Velocity (Y axis- time domain), mean of estimated  standard deviation of measurements for this subject/activity pair. Original unit is acceleration unit radians/s, normalized and bounded within [-1,1] |
+| 26             | tBodyGyro.std.Z     | Angular Velocity (Z axis- time domain), mean of estimated standard deviation of measurements for this subject/activity pair. Original unit is acceleration unit radians/s, normalized and bounded within [-1,1] |
+| 27            | tBodyGyroJerk.mean.X     | Angular Velocity Jerk (X axis - time domain), mean of estimated mean of measurements for this subject/activity pair. Original unit is acceleration unit radian/s^2, normalized and bounded within [-1,1] |
+| 28            | tBodyGyroJerk.mean.Y     | Angular Velocity Jerk (Y axis- time domain), mean of estimated mean of measurements for this subject/activity pair. Original unit is acceleration unit radians/s^2, normalized and bounded within [-1,1] |
+| 29             | tBodyGyroJerk.mean.Z     | Angular Velocity Jerk (Z axis- time domain), mean of estimated mean of measurements for this subject/activity pair. Original unit is acceleration unit radians/s^2, normalized and bounded within [-1,1] |
+| 30             | tBodyGyroJerk.std.X     | Angular Velocity Jerk (X axis- time domain), mean of estimated standard deviation of measurements for this subject/activity pair. Original unit is acceleration unit radians/s^2, normalized and bounded within [-1,1] |
+| 31             | tBodyGyroJerk.std.Y     | Angular Velocity Jerk (Y axis- time domain), mean of estimated  standard deviation of measurements for this subject/activity pair. Original unit is acceleration unit radians/s^2, normalized and bounded within [-1,1] |
+| 32             | tBodyGyroJerk.std.Z     | Angular Velocity Jerk (Z axis- time domain), mean of estimated standard deviation of measurements for this subject/activity pair. Original unit is acceleration unit radians/s^2, normalized and bounded within [-1,1] |
+| 33             | tBodyAccMag.mean     | Triaxial body acceleration magnitude (time domain), mean of estimated mean of measurements for this subject/activity pair. Original unit is acceleration unit g, normalized and bounded within [-1,1] |
+| 34             | tBodyAccMag.std      | Triaxial body acceleration magnitude (time domain), mean of estimated standard deviation of measurements for this subject/activity pair. Original unit is acceleration unit g, normalized and bounded within [-1,1] |
+| 35             | tGravityAccMag.mean     | Triaxial Gravity acceleration magnitude (time domain), mean of estimated mean of measurements for this subject/activity pair. Original unit is acceleration unit g, normalized and bounded within [-1,1] |
+| 36             | tGravityAccMag.std     | Triaxial Gravity acceleration magnitude (time domain), mean of estimated standard deviation of measurements for this subject/activity pair. Original unit is acceleration unit g, normalized and bounded within [-1,1] |
+| 37             | tBodyAccJerkMag.mean     | Triaxial Body Acceleration Jerk signal magnitude (time domain), mean of estimated mean of measurements for this subject/activity pair. Original unit is acceleration unit g/s, normalized and bounded within [-1,1] |
+| 38             | tBodyAccJerkMag.std     | Triaxial Body Acceleration Jerk signal magnitude (time domain), mean of estimated standard deviation of measurements for this subject/activity pair. Original unit is acceleration unit g/s, normalized and bounded within [-1,1] |
+| 39             | tBodyGyroMag.mean     | Angular Velocity magnitude (time domain), mean of estimated mean of measurements for this subject/activity pair. Original unit is acceleration unit radians/s, normalized and bounded within [-1,1] |
+| 40             | tBodyGyroMag.std     | Angular Velocity magnitude (time domain), mean of estimated standard deviation of measurements for this subject/activity pair. Original unit is acceleration unit radians/s, normalized and bounded within [-1,1] |
+| 41             | tBodyGyroJerkMag.mean     | Angular Velocity Jerk Magnitude(time domain), mean of estimated mean of measurements for this subject/activity pair. Original unit is acceleration unit radians/s^2, normalized and bounded within [-1,1] |
+| 42             | tBodyGyroJerkMag.std     | Angular Velocity Jerk Magnitude(time domain), mean of estimated standard deviation of measurements for this subject/activity pair. Original unit is acceleration unit radians/s^2, normalized and bounded within [-1,1] |
+| 43             | fBodyAcc.mean.X     | Triaxial body acceleration (X axis - frequency domain), mean of estimated mean of measurements for this subject/activity pair. Original unit is acceleration unit g, normalized and bounded within [-1,1] |
+| 44             | fBodyAcc.mean.Y     | Triaxial body acceleration (Y axis- frequency domain), mean of estimated mean of measurements for this subject/activity pair. Original unit is acceleration unit g, normalized and bounded within [-1,1] |
+| 45             | fBodyAcc.mean.Z     | Triaxial body acceleration (Z axis- frequency domain), mean of estimated mean of measurements for this subject/activity pair. Original unit is acceleration unit g, normalized and bounded within [-1,1] |
+| 46             | tBodyAcc.std.X     | Triaxial body acceleration (X axis- frequency domain), mean of estimated standard deviation of measurements for this subject/activity pair. Original unit is acceleration unit g, normalized and bounded within [-1,1] |
+| 47             | fBodyAcc.std.Y     | Triaxial body acceleration (Y axis- frequency domain), mean of estimated  standard deviation of measurements for this subject/activity pair. Original unit is acceleration unit g, normalized and bounded within [-1,1] |
+| 48             | fBodyAcc.std.Z     | Triaxial body acceleration (Z axis- frequency domain), mean of estimated standard deviation of measurements for this subject/activity pair. Original unit is acceleration unit g, normalized and bounded within [-1,1] |
+| 49            | fBodyAccJerk.mean.X     | Triaxial Body Acceleration Jerk signal (X axis - frequency domain), mean of estimated mean of measurements for this subject/activity pair. Original unit is acceleration unit g/s, normalized and bounded within [-1,1] |
+| 50            | fBodyAccJerk.mean.Y     | Triaxial Body Acceleration Jerk signal (Y axis- frequency domain), mean of estimated mean of measurements for this subject/activity pair. Original unit is acceleration unit g/s, normalized and bounded within [-1,1] |
+| 51             | fBodyAccJerk.mean.Z     | Triaxial Body Acceleration Jerk signal (Z axis- frequency domain), mean of estimated mean of measurements for this subject/activity pair. Original unit is acceleration unit g/s, normalized and bounded within [-1,1] |
+| 52             | fBodyAccJerk.std.X     | Triaxial Body Acceleration Jerk signal (X axis- frequency domain), mean of estimated standard deviation of measurements for this subject/activity pair. Original unit is acceleration unit g/s, normalized and bounded within [-1,1] |
+| 53             | fBodyAccJerk.std.Y     | Triaxial Body Acceleration Jerk signal (Y axis- frequency domain), mean of estimated  standard deviation of measurements for this subject/activity pair. Original unit is acceleration unit g/s, normalized and bounded within [-1,1] |
+| 54             | fBodyAccJerk.std.Z     | Triaxial Body Acceleration Jerk signal (Z axis- frequency domain), mean of estimated standard deviation of measurements for this subject/activity pair. Original unit is acceleration unit g/s, normalized and bounded within [-1,1] |
+| 55            | fBodyGyro.mean.X     | Angular Velocity (X axis - frequency domain), mean of estimated mean of measurements for this subject/activity pair. Original unit is acceleration unit radian/s, normalized and bounded within [-1,1] |
+| 56            | fBodyGyro.mean.Y     | Angular Velocity (Y axis- frequency domain), mean of estimated mean of measurements for this subject/activity pair. Original unit is acceleration unit radians/s, normalized and bounded within [-1,1] |
+| 57             | fBodyGyro.mean.Z     | Angular Velocity (Z axis- frequency domain), mean of estimated mean of measurements for this subject/activity pair. Original unit is acceleration unit radians/s, normalized and bounded within [-1,1] |
+| 58             | fBodyGyro.std.X     | Angular Velocity (X axis- frequency domain), mean of estimated standard deviation of measurements for this subject/activity pair. Original unit is acceleration unit radians/s, normalized and bounded within [-1,1] |
+| 59             | fBodyGyro.std.Y     | Angular Velocity (Y axis- frequency domain), mean of estimated  standard deviation of measurements for this subject/activity pair. Original unit is acceleration unit radians/s, normalized and bounded within [-1,1] |
+| 60             | fBodyGyro.std.Z     | Angular Velocity (Z axis- frequency domain), mean of estimated standard deviation of measurements for this subject/activity pair. Original unit is acceleration unit radians/s, normalized and bounded within [-1,1] |
+| 61             | fBodyAccMag.mean     | Triaxial body acceleration magnitude (frequency domain), mean of estimated mean of measurements for this subject/activity pair. Original unit is acceleration unit g, normalized and bounded within [-1,1] |
+| 62             | fBodyAccMag.std      | Triaxial body acceleration magnitude (frequency domain), mean of estimated standard deviation of measurements for this subject/activity pair. Original unit is acceleration unit g, normalized and bounded within [-1,1] |
+| 63             | fBodyAccJerkMag.mean     | Triaxial Body Acceleration Jerk signal magnitude (frequency domain), mean of estimated mean of measurements for this subject/activity pair. Original unit is acceleration unit g/s, normalized and bounded within [-1,1] |
+| 64             | fBodyAccJerkMag.std     | Triaxial Body Acceleration Jerk signal magnitude (frequency domain), mean of estimated standard deviation of measurements for this subject/activity pair. Original unit is acceleration unit g/s, normalized and bounded within [-1,1] |
+| 65             | fBodyGyroMag.mean     | Angular Velocity magnitude (frequency domain), mean of estimated mean of measurements for this subject/activity pair. Original unit is acceleration unit radians/s, normalized and bounded within [-1,1] |
+| 66             | fBodyGyroMag.std     | Angular Velocity magnitude (frequency domain), mean of estimated standard deviation of measurements for this subject/activity pair. Original unit is acceleration unit radians/s, normalized and bounded within [-1,1] |
+| 67             | fBodyGyroJerkMag.mean     | Angular Velocity Jerk Magnitude(frequency domain), mean of estimated mean of measurements for this subject/activity pair. Original unit is acceleration unit radians/s^2, normalized and bounded within [-1,1] |
+| 68             | fBodyGyroJerkMag.std     | Angular Velocity Jerk Magnitude(frequency domain), mean of estimated standard deviation of measurements for this subject/activity pair. Original unit is acceleration unit radians/s^2, normalized and bounded within [-1,1] |
+
 
 ## References
 [1] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
