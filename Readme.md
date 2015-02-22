@@ -14,9 +14,6 @@
 
   ```tidy_set <- read.table("final_output.txt",header=TRUE))```
   
-  ```View(tidy_set)```
-  
-  
 ### The Resulting data set satisfies the tidy data set condition
 * Each column contains a single variable
 * Each row is an observation, namely the mean data for a subject and an activity
