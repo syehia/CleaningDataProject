@@ -9,14 +9,15 @@
 * download run_analysis.R from my github submission
 * Source run_analysis.R
 * run 
- ``` run_analysis() ```
-* Tidy data set is generated in "final_output.txt" of working directory (also added in github directory).
-* To View table in Rstudio:
+ ``` run_analysis()```
+* tidy data set is generated in "final_output.txt" of working directory (also added in github directory)
+* to View table in Rstudio:
   ```
    tidy_set <- read.table("final_output.txt",header=TRUE))
    View(tidy_set)
   ```  
-###The Resulting Data set satisfies the tidy data set condition
+  
+### The Resulting data set satisfies the tidy data set condition
 * Each column contains a single variable
 * Each row is an observation, namely the mean data for a subject and an activity
 * All observations are relating to a subject/activity pair, and there is no observational unit that can form a table.
